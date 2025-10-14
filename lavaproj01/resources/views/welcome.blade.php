@@ -8,8 +8,14 @@
 
 <div class="container">
   <h3>Data Teman</h3>
+  
+    @if(empty($dt))
+      <p>tidak ada data<p>
 
-  <table>
+      </head>
+<body>
+
+    <table>
         <caption>Daftar Buku</caption>
         <thead>
             <tr>
@@ -22,9 +28,18 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Data akan diisi di sini -->
+            <tr>
+                <td>{{ $d['idbuku'] }}</td>
+                <td>{{ $d['namateman'] }}</td>
+                <td>{{ $d['alamat'] }}</td>
+                <td>{{ $d['kota'] }}</td>
+                <td>{{ $d['telp'] }}</td>
+                <td>{{ $d['wa'] }}</td>
+            </tr>
+            @endforeach
         </tbody>
     </table>
+    @endif
 
 </body>
 </html>
