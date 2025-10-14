@@ -21,3 +21,4 @@ class temanController extends Controllers
             return view('teman',compact('dt') );
         }
 }
+
