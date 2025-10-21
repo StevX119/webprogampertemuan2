@@ -1,47 +1,8 @@
-<div class="container">
+@extends('layouts.app')
+@section('judulpage','WeLcome')
 
-<a href="./">Home</a>
-<a href="./teman">Teman</a>
-
+@section('konten')
+<div class="conntainer"></div>
+    <h3>Welcome<h3>
 </div>
-
-
-<div class="container">
-  <h3>Data Teman</h3>
-  
-    @if(empty($dt))
-      <p>tidak ada data<p>
-
-      </head>
-<body>
-
-    <table>
-        <caption>Daftar Buku</caption>
-        <thead>
-            <tr>
-                <th>idbuku</th>
-                <th>Nama</th>
-                <th>Alamat</th>
-                <th>Kota</th>
-                <th>Telp</th>
-                <th>WA</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ $d['idbuku'] }}</td>
-                <td>{{ $d['namateman'] }}</td>
-                <td>{{ $d['alamat'] }}</td>
-                <td>{{ $d['kota'] }}</td>
-                <td>{{ $d['telp'] }}</td>
-                <td>{{ $d['wa'] }}</td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    @endif
-
-</body>
-</html>
-
-</div>
+@endsection 
