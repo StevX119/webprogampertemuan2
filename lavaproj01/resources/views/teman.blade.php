@@ -12,6 +12,7 @@
     @if(empty($dt))
       <p>tidak ada data<p>
 @else
+    <table class="konten tabel">
       </head>
 <body>
 
