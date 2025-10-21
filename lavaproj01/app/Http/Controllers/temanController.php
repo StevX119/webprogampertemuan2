@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 
-class temanController extends Controllers
+class temanController extends Controller
 {
         public function index(){
             $dt = [
                 [
                 'idbuku'=>2,
-                'nama'=>'Steven Bliah',
+                'namateman'=>'Steven Bliah',
                 'alamat'=>'Jl Terusan Sulfat No 86A',
                 'kota'=>'Batu',
                 'telp'=>'08129384714',

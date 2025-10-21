@@ -11,7 +11,7 @@
   
     @if(empty($dt))
       <p>tidak ada data<p>
-
+@else
       </head>
 <body>
 
@@ -26,9 +26,9 @@
                 <th>Telp</th>
                 <th>WA</th>
             </tr>
-        </thead>
+</thead>
         <tbody>
-            @foreach
+        @foreach($dt as $d) 
             <tr>
                 <td>{{ $d['idbuku'] }}</td>
                 <td>{{ $d['namateman'] }}</td>
