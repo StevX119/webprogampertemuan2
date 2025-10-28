@@ -2,23 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 class temanController extends Controller
 {
-        public function index(){
-            $dt = [
-                [
-                'idbuku'=>2,
-                'namateman'=>'Steven Bliah',
-                'alamat'=>'Jl Terusan Sulfat No 86A',
-                'kota'=>'Batu',
-                'telp'=>'08129384714',
-                'wa'=>'09782919874',
-                ],
+    private $dta = [
+        [
+            'idbuku'=>1,
+            'namateman'=>'Yuanes Idah Blili',
+            'alamat'=>'Jl. Lurus Terus Blok D.29A',
+            'kota'=>'Denpasar',
+            'telp'=>'03611011',
+            'wa'=>'08778877',
+        ],
+        [
+            'idbuku'=>2,
+            'namateman'=>'Yunita Sari dewi Purnama',
+            'alamat'=>'Jl. Lika-liku D No 29A',
+            'kota'=>'Denpasar',
+            'telp'=>'036445544',
+            'wa'=>'0866554433',
+        ],
+    ];
+    public function index(){
+        $dt = $this->dta;
+        return view('teman',compact('dt') ) ;
+    }
+    public function selengkapnya($id){
+        $dt = collect($this->dta)->firstWhere('idbuku',$id);
 
-            ];
-            return view('teman',compact('dt') );
+        if(!$dt){
+            abort(404,"Data tidak dengan $id ditemukan");
         }
-}
 
+        return view('datateman',compact('dt'));
+    }
+}
